@@ -1,0 +1,61 @@
+name: SkillForge CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-test:
+    name: Build & Test Go Services
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Build API Service
+        run: |
+          cd apps/api
+          go mod tidy
+          go build -v ./...
+
+      - name: Build Worker Service
+        run: |
+          cd apps/worker
+          go mod tidy
+          go build -v ./...
+
+  frontend-build:
+    name: Build Next.js Application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install & Build
+        run: |
+          cd apps/web
+          npm install
+          npm run build
+
+  docker-build:
+    name: Build Docker Container Images
+    needs: [backend-test, frontend-build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Python Runner Image
+        run: docker build -t skillforge-runner-python:latest runners/python
+
+      - name: Build Node.js Runner Image
+        run: docker build -t skillforge-runner-nodejs:latest runners/nodejs

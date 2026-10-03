@@ -1,0 +1,3570 @@
+[
+  {
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "EASY",
+    "category": "Arrays & Hashing",
+    "description": "Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.\n\nYou may assume that each input would have **exactly one solution**, and you may not use the same element twice.",
+    "func": "twoSum",
+    "args": "nums: list[int], target: int",
+    "ret_py": "list[int]",
+    "args_js": "nums, target",
+    "args_cpp": "vector<int>& nums, int target",
+    "ret_cpp": "vector<int>",
+    "args_c": "int* nums, int numsSize, int target, int* returnSize",
+    "ret_c": "int*",
+    "args_java": "int[] nums, int target",
+    "ret_java": "int[]",
+    "args_go": "nums []int, target int",
+    "ret_go": "[]int",
+    "args_rust": "nums: Vec<i32>, target: i32",
+    "ret_rust": "Vec<i32>",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return {};",
+    "ret_val_c": "*returnSize = 0; return NULL;",
+    "ret_val_java": "return new int[]{};",
+    "ret_val_go": "return []int{}",
+    "ret_val_rust": "vec![]",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "target": 9
+        },
+        "expected_output": [
+          0,
+          1
+        ],
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            2,
+            4
+          ],
+          "target": 6
+        },
+        "expected_output": [
+          1,
+          2
+        ],
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            3
+          ],
+          "target": 6
+        },
+        "expected_output": [
+          0,
+          1
+        ],
+        "is_hidden": true
+      }
+    ]
+  },
+  {
+    "slug": "contains-duplicate",
+    "title": "Contains Duplicate",
+    "difficulty": "EASY",
+    "category": "Arrays & Hashing",
+    "description": "Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.",
+    "func": "containsDuplicate",
+    "args": "nums: list[int]",
+    "ret_py": "bool",
+    "args_js": "nums",
+    "args_cpp": "vector<int>& nums",
+    "ret_cpp": "bool",
+    "args_c": "int* nums, int numsSize",
+    "ret_c": "bool",
+    "args_java": "int[] nums",
+    "ret_java": "boolean",
+    "args_go": "nums []int",
+    "ret_go": "bool",
+    "args_rust": "nums: Vec<i32>",
+    "ret_rust": "bool",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return false;",
+    "ret_val_c": "return false;",
+    "ret_val_java": "return false;",
+    "ret_val_go": "return false",
+    "ret_val_rust": "false",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "expected_output": true,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected_output": false,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "difficulty": "EASY",
+    "category": "Arrays & Hashing",
+    "description": "Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.",
+    "func": "isAnagram",
+    "args": "s: str, t: str",
+    "ret_py": "bool",
+    "args_js": "s, t",
+    "args_cpp": "string s, string t",
+    "ret_cpp": "bool",
+    "args_c": "char* s, char* t",
+    "ret_c": "bool",
+    "args_java": "String s, String t",
+    "ret_java": "boolean",
+    "args_go": "s string, t string",
+    "ret_go": "bool",
+    "args_rust": "s: String, t: String",
+    "ret_rust": "bool",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return true;",
+    "ret_val_c": "return true;",
+    "ret_val_java": "return true;",
+    "ret_val_go": "return true",
+    "ret_val_rust": "true",
+    "test_cases": [
+      {
+        "input": {
+          "s": "anagram",
+          "t": "nagaram"
+        },
+        "expected_output": true,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "s": "rat",
+          "t": "car"
+        },
+        "expected_output": false,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "group-anagrams",
+    "title": "Group Anagrams",
+    "difficulty": "MEDIUM",
+    "category": "Arrays & Hashing",
+    "description": "Given an array of strings `strs`, group the anagrams together. You can return the answer in **any order**.",
+    "func": "groupAnagrams",
+    "args": "strs: list[str]",
+    "ret_py": "list[list[str]]",
+    "args_js": "strs",
+    "args_cpp": "vector<string>& strs",
+    "ret_cpp": "vector<vector<string>>",
+    "args_c": "char** strs, int strsSize, int* returnSize, int** returnColumnSizes",
+    "ret_c": "char***",
+    "args_java": "String[] strs",
+    "ret_java": "List<List<String>>",
+    "args_go": "strs []string",
+    "ret_go": "[][]string",
+    "args_rust": "strs: Vec<String>",
+    "ret_rust": "Vec<Vec<String>>",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return {};",
+    "ret_val_c": "*returnSize = 0; return NULL;",
+    "ret_val_java": "return new ArrayList<>();",
+    "ret_val_go": "return [][]string{}",
+    "ret_val_rust": "vec![]",
+    "test_cases": [
+      {
+        "input": {
+          "strs": [
+            "eat",
+            "tea",
+            "tan",
+            "ate",
+            "nat",
+            "bat"
+          ]
+        },
+        "expected_output": [
+          [
+            "bat"
+          ],
+          [
+            "nat",
+            "tan"
+          ],
+          [
+            "ate",
+            "eat",
+            "tea"
+          ]
+        ],
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "difficulty": "MEDIUM",
+    "category": "Arrays & Hashing",
+    "description": "Given an integer array `nums` and an integer `k`, return the `k` most frequent elements. You may return the answer in **any order**.",
+    "func": "topKFrequent",
+    "args": "nums: list[int], k: int",
+    "ret_py": "list[int]",
+    "args_js": "nums, k",
+    "args_cpp": "vector<int>& nums, int k",
+    "ret_cpp": "vector<int>",
+    "args_c": "int* nums, int numsSize, int k, int* returnSize",
+    "ret_c": "int*",
+    "args_java": "int[] nums, int k",
+    "ret_java": "int[]",
+    "args_go": "nums []int, k int",
+    "ret_go": "[]int",
+    "args_rust": "nums: Vec<i32>, k: i32",
+    "ret_rust": "Vec<i32>",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return {};",
+    "ret_val_c": "*returnSize = 0; return NULL;",
+    "ret_val_java": "return new int[]{};",
+    "ret_val_go": "return []int{}",
+    "ret_val_rust": "vec![]",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            3
+          ],
+          "k": 2
+        },
+        "expected_output": [
+          1,
+          2
+        ],
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "product-of-array-except-self",
+    "title": "Product of Array Except Self",
+    "difficulty": "MEDIUM",
+    "category": "Arrays & Hashing",
+    "description": "Given an integer array `nums`, return an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`. Must run in $O(n)$ time.",
+    "func": "productExceptSelf",
+    "args": "nums: list[int]",
+    "ret_py": "list[int]",
+    "args_js": "nums",
+    "args_cpp": "vector<int>& nums",
+    "ret_cpp": "vector<int>",
+    "args_c": "int* nums, int numsSize, int* returnSize",
+    "ret_c": "int*",
+    "args_java": "int[] nums",
+    "ret_java": "int[]",
+    "args_go": "nums []int",
+    "ret_go": "[]int",
+    "args_rust": "nums: Vec<i32>",
+    "ret_rust": "Vec<i32>",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return {};",
+    "ret_val_c": "*returnSize = 0; return NULL;",
+    "ret_val_java": "return new int[]{};",
+    "ret_val_go": "return []int{}",
+    "ret_val_rust": "vec![]",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected_output": [
+          24,
+          12,
+          8,
+          6
+        ],
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "difficulty": "MEDIUM",
+    "category": "Arrays & Hashing",
+    "description": "Given an unsorted array of integers `nums`, return the length of the longest consecutive elements sequence. Must run in $O(n)$ time.",
+    "func": "longestConsecutive",
+    "args": "nums: list[int]",
+    "ret_py": "int",
+    "args_js": "nums",
+    "args_cpp": "vector<int>& nums",
+    "ret_cpp": "int",
+    "args_c": "int* nums, int numsSize",
+    "ret_c": "int",
+    "args_java": "int[] nums",
+    "ret_java": "int",
+    "args_go": "nums []int",
+    "ret_go": "int",
+    "args_rust": "nums: Vec<i32>",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            100,
+            4,
+            200,
+            1,
+            3,
+            2
+          ]
+        },
+        "expected_output": 4,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "valid-palindrome",
+    "title": "Valid Palindrome",
+    "difficulty": "EASY",
+    "category": "Two Pointers",
+    "description": "A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.",
+    "func": "isPalindrome",
+    "args": "s: str",
+    "ret_py": "bool",
+    "args_js": "s",
+    "args_cpp": "string s",
+    "ret_cpp": "bool",
+    "args_c": "char* s",
+    "ret_c": "bool",
+    "args_java": "String s",
+    "ret_java": "boolean",
+    "args_go": "s string",
+    "ret_go": "bool",
+    "args_rust": "s: String",
+    "ret_rust": "bool",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return true;",
+    "ret_val_c": "return true;",
+    "ret_val_java": "return true;",
+    "ret_val_go": "return true",
+    "ret_val_rust": "true",
+    "test_cases": [
+      {
+        "input": {
+          "s": "A man, a plan, a canal: Panama"
+        },
+        "expected_output": true,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "s": "race a car"
+        },
+        "expected_output": false,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "two-sum-ii-input-array-is-sorted",
+    "title": "Two Sum II - Input Array Is Sorted",
+    "difficulty": "MEDIUM",
+    "category": "Two Pointers",
+    "description": "Given a **1-indexed** array of integers `numbers` that is already sorted in non-decreasing order, find two numbers such that they add up to a specific `target` number.",
+    "func": "twoSum",
+    "args": "numbers: list[int], target: int",
+    "ret_py": "list[int]",
+    "args_js": "numbers, target",
+    "args_cpp": "vector<int>& numbers, int target",
+    "ret_cpp": "vector<int>",
+    "args_c": "int* numbers, int numbersSize, int target, int* returnSize",
+    "ret_c": "int*",
+    "args_java": "int[] numbers, int target",
+    "ret_java": "int[]",
+    "args_go": "numbers []int, target int",
+    "ret_go": "[]int",
+    "args_rust": "numbers: Vec<i32>, target: i32",
+    "ret_rust": "Vec<i32>",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return {};",
+    "ret_val_c": "*returnSize = 0; return NULL;",
+    "ret_val_java": "return new int[]{};",
+    "ret_val_go": "return []int{}",
+    "ret_val_rust": "vec![]",
+    "test_cases": [
+      {
+        "input": {
+          "numbers": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "target": 9
+        },
+        "expected_output": [
+          1,
+          2
+        ],
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "3sum",
+    "title": "3Sum",
+    "difficulty": "MEDIUM",
+    "category": "Two Pointers",
+    "description": "Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.",
+    "func": "threeSum",
+    "args": "nums: list[int]",
+    "ret_py": "list[list[int]]",
+    "args_js": "nums",
+    "args_cpp": "vector<int>& nums",
+    "ret_cpp": "vector<vector<int>>",
+    "args_c": "int* nums, int numsSize, int* returnSize, int** returnColumnSizes",
+    "ret_c": "int**",
+    "args_java": "int[] nums",
+    "ret_java": "List<List<Integer>>",
+    "args_go": "nums []int",
+    "ret_go": "[][]int",
+    "args_rust": "nums: Vec<i32>",
+    "ret_rust": "Vec<Vec<i32>>",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return {};",
+    "ret_val_c": "*returnSize = 0; return NULL;",
+    "ret_val_java": "return new ArrayList<>();",
+    "ret_val_go": "return [][]int{}",
+    "ret_val_rust": "vec![]",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            1,
+            2,
+            -1,
+            -4
+          ]
+        },
+        "expected_output": [
+          [
+            -1,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            1
+          ]
+        ],
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "container-with-most-water",
+    "title": "Container With Most Water",
+    "difficulty": "MEDIUM",
+    "category": "Two Pointers",
+    "description": "You are given an integer array `height` of length `n`. Find two lines that together with the x-axis form a container, such that the container contains the most water.",
+    "func": "maxArea",
+    "args": "height: list[int]",
+    "ret_py": "int",
+    "args_js": "height",
+    "args_cpp": "vector<int>& height",
+    "ret_cpp": "int",
+    "args_c": "int* height, int heightSize",
+    "ret_c": "int",
+    "args_java": "int[] height",
+    "ret_java": "int",
+    "args_go": "height []int",
+    "ret_go": "int",
+    "args_rust": "height: Vec<i32>",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "height": [
+            1,
+            8,
+            6,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7
+          ]
+        },
+        "expected_output": 49,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "trapping-rain-water",
+    "title": "Trapping Rain Water",
+    "difficulty": "HARD",
+    "category": "Two Pointers",
+    "description": "Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.",
+    "func": "trap",
+    "args": "height: list[int]",
+    "ret_py": "int",
+    "args_js": "height",
+    "args_cpp": "vector<int>& height",
+    "ret_cpp": "int",
+    "args_c": "int* height, int heightSize",
+    "ret_c": "int",
+    "args_java": "int[] height",
+    "ret_java": "int",
+    "args_go": "height []int",
+    "ret_go": "int",
+    "args_rust": "height: Vec<i32>",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "height": [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        "expected_output": 6,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "EASY",
+    "category": "Sliding Window",
+    "description": "You are given an array `prices` where `prices[i]` is the price of a given stock on the $i^{th}$ day. Return the maximum profit you can achieve from this transaction.",
+    "func": "maxProfit",
+    "args": "prices: list[int]",
+    "ret_py": "int",
+    "args_js": "prices",
+    "args_cpp": "vector<int>& prices",
+    "ret_cpp": "int",
+    "args_c": "int* prices, int pricesSize",
+    "ret_c": "int",
+    "args_java": "int[] prices",
+    "ret_java": "int",
+    "args_go": "prices []int",
+    "ret_go": "int",
+    "args_rust": "prices: Vec<i32>",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "prices": [
+            7,
+            1,
+            5,
+            3,
+            6,
+            4
+          ]
+        },
+        "expected_output": 5,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "prices": [
+            7,
+            6,
+            4,
+            3,
+            1
+          ]
+        },
+        "expected_output": 0,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "longest-substring-without-repeating-characters",
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "MEDIUM",
+    "category": "Sliding Window",
+    "description": "Given a string `s`, find the length of the **longest substring** without repeating characters.",
+    "func": "lengthOfLongestSubstring",
+    "args": "s: str",
+    "ret_py": "int",
+    "args_js": "s",
+    "args_cpp": "string s",
+    "ret_cpp": "int",
+    "args_c": "char* s",
+    "ret_c": "int",
+    "args_java": "String s",
+    "ret_java": "int",
+    "args_go": "s string",
+    "ret_go": "int",
+    "args_rust": "s: String",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "s": "abcabcbb"
+        },
+        "expected_output": 3,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "s": "bbbbb"
+        },
+        "expected_output": 1,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "difficulty": "EASY",
+    "category": "Stack",
+    "description": "Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.",
+    "func": "isValid",
+    "args": "s: str",
+    "ret_py": "bool",
+    "args_js": "s",
+    "args_cpp": "string s",
+    "ret_cpp": "bool",
+    "args_c": "char* s",
+    "ret_c": "bool",
+    "args_java": "String s",
+    "ret_java": "boolean",
+    "args_go": "s string",
+    "ret_go": "bool",
+    "args_rust": "s: String",
+    "ret_rust": "bool",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return true;",
+    "ret_val_c": "return true;",
+    "ret_val_java": "return true;",
+    "ret_val_go": "return true",
+    "ret_val_rust": "true",
+    "test_cases": [
+      {
+        "input": {
+          "s": "()"
+        },
+        "expected_output": true,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "s": "()[]{}"
+        },
+        "expected_output": true,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "s": "(]"
+        },
+        "expected_output": false,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "binary-search",
+    "title": "Binary Search",
+    "difficulty": "EASY",
+    "category": "Binary Search",
+    "description": "Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, return its index. Otherwise, return `-1`.",
+    "func": "search",
+    "args": "nums: list[int], target: int",
+    "ret_py": "int",
+    "args_js": "nums, target",
+    "args_cpp": "vector<int>& nums, int target",
+    "ret_cpp": "int",
+    "args_c": "int* nums, int numsSize, int target",
+    "ret_c": "int",
+    "args_java": "int[] nums, int target",
+    "ret_java": "int",
+    "args_go": "nums []int, target int",
+    "ret_go": "int",
+    "args_rust": "nums: Vec<i32>, target: i32",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return -1;",
+    "ret_val_c": "return -1;",
+    "ret_val_java": "return -1;",
+    "ret_val_go": "return -1",
+    "ret_val_rust": "-1",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          "target": 9
+        },
+        "expected_output": 4,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          "target": 2
+        },
+        "expected_output": -1,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "difficulty": "MEDIUM",
+    "category": "Binary Search",
+    "description": "You are given an `m x n` integer matrix `matrix` with two properties:\n1. Each row is sorted in non-decreasing order.\n2. The first integer of each row is greater than the last integer of the previous row.\nGiven an integer `target`, return `true` if `target` is in `matrix` or `false` otherwise.",
+    "func": "searchMatrix",
+    "args": "matrix: list[list[int]], target: int",
+    "ret_py": "bool",
+    "args_js": "matrix, target",
+    "args_cpp": "vector<vector<int>>& matrix, int target",
+    "ret_cpp": "bool",
+    "args_c": "int** matrix, int matrixSize, int* matrixColSize, int target",
+    "ret_c": "bool",
+    "args_java": "int[][] matrix, int target",
+    "ret_java": "boolean",
+    "args_go": "matrix [][]int, target int",
+    "ret_go": "bool",
+    "args_rust": "matrix: Vec<Vec<i32>>, target: i32",
+    "ret_rust": "bool",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return false;",
+    "ret_val_c": "return false;",
+    "ret_val_java": "return false;",
+    "ret_val_go": "return false",
+    "ret_val_rust": "false",
+    "test_cases": [
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              10,
+              11,
+              16,
+              20
+            ],
+            [
+              23,
+              30,
+              34,
+              60
+            ]
+          ],
+          "target": 3
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "climbing-stairs",
+    "title": "Climbing Stairs",
+    "difficulty": "EASY",
+    "category": "1D Dynamic Programming",
+    "description": "You are climbing a staircase. It takes `n` steps to reach the top. Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?",
+    "func": "climbStairs",
+    "args": "n: int",
+    "ret_py": "int",
+    "args_js": "n",
+    "args_cpp": "int n",
+    "ret_cpp": "int",
+    "args_c": "int n",
+    "ret_c": "int",
+    "args_java": "int n",
+    "ret_java": "int",
+    "args_go": "n int",
+    "ret_go": "int",
+    "args_rust": "n: i32",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "n": 2
+        },
+        "expected_output": 2,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "n": 3
+        },
+        "expected_output": 3,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "house-robber",
+    "title": "House Robber",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. Adjacent houses have security systems connected \u2014 return the maximum amount of money you can rob tonight without alerting the police.",
+    "func": "rob",
+    "args": "nums: list[int]",
+    "ret_py": "int",
+    "args_js": "nums",
+    "args_cpp": "vector<int>& nums",
+    "ret_cpp": "int",
+    "args_c": "int* nums, int numsSize",
+    "ret_c": "int",
+    "args_java": "int[] nums",
+    "ret_java": "int",
+    "args_go": "nums []int",
+    "ret_go": "int",
+    "args_rust": "nums: Vec<i32>",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "expected_output": 4,
+        "is_hidden": false
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            7,
+            9,
+            3,
+            1
+          ]
+        },
+        "expected_output": 12,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "coin-change",
+    "title": "Coin Change",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "You are given an integer array `coins` representing coins of different denominations and an integer `amount` representing a total amount of money. Return the fewest number of coins needed to make up that amount.",
+    "func": "coinChange",
+    "args": "coins: list[int], amount: int",
+    "ret_py": "int",
+    "args_js": "coins, amount",
+    "args_cpp": "vector<int>& coins, int amount",
+    "ret_cpp": "int",
+    "args_c": "int* coins, int coinsSize, int amount",
+    "ret_c": "int",
+    "args_java": "int[] coins, int amount",
+    "ret_java": "int",
+    "args_go": "coins []int, amount int",
+    "ret_go": "int",
+    "args_rust": "coins: Vec<i32>, amount: i32",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return -1;",
+    "ret_val_c": "return -1;",
+    "ret_val_java": "return -1;",
+    "ret_val_go": "return -1",
+    "ret_val_rust": "-1",
+    "test_cases": [
+      {
+        "input": {
+          "coins": [
+            1,
+            2,
+            5
+          ],
+          "amount": 11
+        },
+        "expected_output": 3,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "number-of-islands",
+    "title": "Number of Islands",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return the number of islands.",
+    "func": "numIslands",
+    "args": "grid: list[list[str]]",
+    "ret_py": "int",
+    "args_js": "grid",
+    "args_cpp": "vector<vector<char>>& grid",
+    "ret_cpp": "int",
+    "args_c": "char** grid, int gridSize, int* gridColSize",
+    "ret_c": "int",
+    "args_java": "char[][] grid",
+    "ret_java": "int",
+    "args_go": "grid [][]byte",
+    "ret_go": "int",
+    "args_rust": "grid: Vec<Vec<char>>",
+    "ret_rust": "i32",
+    "ret_val_py": "pass",
+    "ret_val_cpp": "return 0;",
+    "ret_val_c": "return 0;",
+    "ret_val_java": "return 0;",
+    "ret_val_go": "return 0",
+    "ret_val_rust": "0",
+    "test_cases": [
+      {
+        "input": {
+          "grid": [
+            [
+              "1",
+              "1",
+              "1",
+              "1",
+              "0"
+            ],
+            [
+              "1",
+              "1",
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1",
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "expected_output": 1,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "encode-and-decode-strings",
+    "title": "Encode and Decode Strings",
+    "difficulty": "MEDIUM",
+    "category": "Arrays & Hashing",
+    "description": "Given problem `Encode and Decode Strings` under the **Arrays & Hashing** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def encodeAndDecodeStrings(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Encode and Decode Strings\n */\nvar encodeAndDecodeStrings = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto encodeAndDecodeStrings() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc encodeAndDecodeStrings() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn encode_and_decode_strings() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "difficulty": "MEDIUM",
+    "category": "Arrays & Hashing",
+    "description": "Given problem `Valid Sudoku` under the **Arrays & Hashing** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def validSudoku(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Valid Sudoku\n */\nvar validSudoku = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto validSudoku() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc validSudoku() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn valid_sudoku() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "concatenation-of-array",
+    "title": "Concatenation of Array",
+    "difficulty": "EASY",
+    "category": "Arrays & Hashing",
+    "description": "Given problem `Concatenation of Array` under the **Arrays & Hashing** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def concatenationOfArray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Concatenation of Array\n */\nvar concatenationOfArray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto concatenationOfArray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc concatenationOfArray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn concatenation_of_array() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "remove-duplicates-from-sorted-array",
+    "title": "Remove Duplicates from Sorted Array",
+    "difficulty": "EASY",
+    "category": "Two Pointers",
+    "description": "Given problem `Remove Duplicates from Sorted Array` under the **Two Pointers** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def removeDuplicatesFromSortedArray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Remove Duplicates from Sorted Array\n */\nvar removeDuplicatesFromSortedArray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto removeDuplicatesFromSortedArray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc removeDuplicatesFromSortedArray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn remove_duplicates_from_sorted_array() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "move-zeroes",
+    "title": "Move Zeroes",
+    "difficulty": "EASY",
+    "category": "Two Pointers",
+    "description": "Given problem `Move Zeroes` under the **Two Pointers** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def moveZeroes(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Move Zeroes\n */\nvar moveZeroes = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto moveZeroes() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc moveZeroes() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn move_zeroes() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "squares-of-a-sorted-array",
+    "title": "Squares of a Sorted Array",
+    "difficulty": "EASY",
+    "category": "Two Pointers",
+    "description": "Given problem `Squares of a Sorted Array` under the **Two Pointers** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def squaresOfASortedArray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Squares of a Sorted Array\n */\nvar squaresOfASortedArray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto squaresOfASortedArray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc squaresOfASortedArray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn squares_of_a_sorted_array() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "longest-repeating-character-replacement",
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "MEDIUM",
+    "category": "Sliding Window",
+    "description": "Given problem `Longest Repeating Character Replacement` under the **Sliding Window** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def longestRepeatingCharacterReplacement(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Longest Repeating Character Replacement\n */\nvar longestRepeatingCharacterReplacement = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto longestRepeatingCharacterReplacement() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc longestRepeatingCharacterReplacement() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn longest_repeating_character_replacement() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "permutation-in-string",
+    "title": "Permutation in String",
+    "difficulty": "MEDIUM",
+    "category": "Sliding Window",
+    "description": "Given problem `Permutation in String` under the **Sliding Window** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def permutationInString(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Permutation in String\n */\nvar permutationInString = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto permutationInString() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc permutationInString() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn permutation_in_string() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "minimum-window-substring",
+    "title": "Minimum Window Substring",
+    "difficulty": "HARD",
+    "category": "Sliding Window",
+    "description": "Given problem `Minimum Window Substring` under the **Sliding Window** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def minimumWindowSubstring(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Minimum Window Substring\n */\nvar minimumWindowSubstring = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto minimumWindowSubstring() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc minimumWindowSubstring() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn minimum_window_substring() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "sliding-window-maximum",
+    "title": "Sliding Window Maximum",
+    "difficulty": "HARD",
+    "category": "Sliding Window",
+    "description": "Given problem `Sliding Window Maximum` under the **Sliding Window** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def slidingWindowMaximum(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Sliding Window Maximum\n */\nvar slidingWindowMaximum = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto slidingWindowMaximum() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc slidingWindowMaximum() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn sliding_window_maximum() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "min-stack",
+    "title": "Min Stack",
+    "difficulty": "MEDIUM",
+    "category": "Stack",
+    "description": "Given problem `Min Stack` under the **Stack** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def minStack(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Min Stack\n */\nvar minStack = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto minStack() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc minStack() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn min_stack() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "evaluate-reverse-polish-notation",
+    "title": "Evaluate Reverse Polish Notation",
+    "difficulty": "MEDIUM",
+    "category": "Stack",
+    "description": "Given problem `Evaluate Reverse Polish Notation` under the **Stack** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def evaluateReversePolishNotation(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Evaluate Reverse Polish Notation\n */\nvar evaluateReversePolishNotation = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto evaluateReversePolishNotation() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc evaluateReversePolishNotation() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn evaluate_reverse_polish_notation() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "generate-parentheses",
+    "title": "Generate Parentheses",
+    "difficulty": "MEDIUM",
+    "category": "Stack",
+    "description": "Given problem `Generate Parentheses` under the **Stack** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def generateParentheses(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Generate Parentheses\n */\nvar generateParentheses = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto generateParentheses() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc generateParentheses() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn generate_parentheses() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "daily-temperatures",
+    "title": "Daily Temperatures",
+    "difficulty": "MEDIUM",
+    "category": "Stack",
+    "description": "Given problem `Daily Temperatures` under the **Stack** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def dailyTemperatures(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Daily Temperatures\n */\nvar dailyTemperatures = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto dailyTemperatures() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc dailyTemperatures() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn daily_temperatures() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "car-fleet",
+    "title": "Car Fleet",
+    "difficulty": "MEDIUM",
+    "category": "Stack",
+    "description": "Given problem `Car Fleet` under the **Stack** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def carFleet(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Car Fleet\n */\nvar carFleet = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto carFleet() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc carFleet() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn car_fleet() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "largest-rectangle-in-histogram",
+    "title": "Largest Rectangle in Histogram",
+    "difficulty": "HARD",
+    "category": "Stack",
+    "description": "Given problem `Largest Rectangle in Histogram` under the **Stack** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def largestRectangleInHistogram(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Largest Rectangle in Histogram\n */\nvar largestRectangleInHistogram = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto largestRectangleInHistogram() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc largestRectangleInHistogram() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn largest_rectangle_in_histogram() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "koko-eating-bananas",
+    "title": "Koko Eating Bananas",
+    "difficulty": "MEDIUM",
+    "category": "Binary Search",
+    "description": "Given problem `Koko Eating Bananas` under the **Binary Search** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def kokoEatingBananas(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Koko Eating Bananas\n */\nvar kokoEatingBananas = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto kokoEatingBananas() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc kokoEatingBananas() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn koko_eating_bananas() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "difficulty": "MEDIUM",
+    "category": "Binary Search",
+    "description": "Given problem `Find Minimum in Rotated Sorted Array` under the **Binary Search** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def findMinimumInRotatedSortedArray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Find Minimum in Rotated Sorted Array\n */\nvar findMinimumInRotatedSortedArray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto findMinimumInRotatedSortedArray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc findMinimumInRotatedSortedArray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn find_minimum_in_rotated_sorted_array() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "search-in-rotated-sorted-array",
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "MEDIUM",
+    "category": "Binary Search",
+    "description": "Given problem `Search in Rotated Sorted Array` under the **Binary Search** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def searchInRotatedSortedArray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Search in Rotated Sorted Array\n */\nvar searchInRotatedSortedArray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto searchInRotatedSortedArray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc searchInRotatedSortedArray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn search_in_rotated_sorted_array() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "time-based-key-value-store",
+    "title": "Time Based Key-Value Store",
+    "difficulty": "MEDIUM",
+    "category": "Binary Search",
+    "description": "Given problem `Time Based Key-Value Store` under the **Binary Search** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def timeBasedKeyValueStore(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Time Based Key-Value Store\n */\nvar timeBasedKeyValueStore = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto timeBasedKeyValueStore() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc timeBasedKeyValueStore() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn time_based_key_value_store() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "median-of-two-sorted-arrays",
+    "title": "Median of Two Sorted Arrays",
+    "difficulty": "HARD",
+    "category": "Binary Search",
+    "description": "Given problem `Median of Two Sorted Arrays` under the **Binary Search** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def medianOfTwoSortedArrays(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Median of Two Sorted Arrays\n */\nvar medianOfTwoSortedArrays = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto medianOfTwoSortedArrays() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc medianOfTwoSortedArrays() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn median_of_two_sorted_arrays() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "reverse-linked-list",
+    "title": "Reverse Linked List",
+    "difficulty": "EASY",
+    "category": "Linked List",
+    "description": "Given problem `Reverse Linked List` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def reverseLinkedList(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Reverse Linked List\n */\nvar reverseLinkedList = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto reverseLinkedList() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc reverseLinkedList() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn reverse_linked_list() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "merge-two-sorted-lists",
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "EASY",
+    "category": "Linked List",
+    "description": "Given problem `Merge Two Sorted Lists` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def mergeTwoSortedLists(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Merge Two Sorted Lists\n */\nvar mergeTwoSortedLists = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto mergeTwoSortedLists() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc mergeTwoSortedLists() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn merge_two_sorted_lists() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "reorder-list",
+    "title": "Reorder List",
+    "difficulty": "MEDIUM",
+    "category": "Linked List",
+    "description": "Given problem `Reorder List` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def reorderList(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Reorder List\n */\nvar reorderList = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto reorderList() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc reorderList() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn reorder_list() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "remove-nth-node-from-end-of-list",
+    "title": "Remove Nth Node From End of List",
+    "difficulty": "MEDIUM",
+    "category": "Linked List",
+    "description": "Given problem `Remove Nth Node From End of List` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def removeNthNodeFromEndOfList(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Remove Nth Node From End of List\n */\nvar removeNthNodeFromEndOfList = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto removeNthNodeFromEndOfList() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc removeNthNodeFromEndOfList() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn remove_nth_node_from_end_of_list() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "copy-list-with-random-pointer",
+    "title": "Copy List with Random Pointer",
+    "difficulty": "MEDIUM",
+    "category": "Linked List",
+    "description": "Given problem `Copy List with Random Pointer` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def copyListWithRandomPointer(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Copy List with Random Pointer\n */\nvar copyListWithRandomPointer = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto copyListWithRandomPointer() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc copyListWithRandomPointer() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn copy_list_with_random_pointer() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "add-two-numbers",
+    "title": "Add Two Numbers",
+    "difficulty": "MEDIUM",
+    "category": "Linked List",
+    "description": "Given problem `Add Two Numbers` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def addTwoNumbers(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Add Two Numbers\n */\nvar addTwoNumbers = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto addTwoNumbers() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc addTwoNumbers() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn add_two_numbers() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "linked-list-cycle",
+    "title": "Linked List Cycle",
+    "difficulty": "EASY",
+    "category": "Linked List",
+    "description": "Given problem `Linked List Cycle` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def linkedListCycle(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Linked List Cycle\n */\nvar linkedListCycle = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto linkedListCycle() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc linkedListCycle() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn linked_list_cycle() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "find-the-duplicate-number",
+    "title": "Find the Duplicate Number",
+    "difficulty": "MEDIUM",
+    "category": "Linked List",
+    "description": "Given problem `Find the Duplicate Number` under the **Linked List** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def findTheDuplicateNumber(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Find the Duplicate Number\n */\nvar findTheDuplicateNumber = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto findTheDuplicateNumber() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc findTheDuplicateNumber() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn find_the_duplicate_number() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "invert-binary-tree",
+    "title": "Invert Binary Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "description": "Given problem `Invert Binary Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def invertBinaryTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Invert Binary Tree\n */\nvar invertBinaryTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto invertBinaryTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc invertBinaryTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn invert_binary_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "maximum-depth-of-binary-tree",
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "description": "Given problem `Maximum Depth of Binary Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def maximumDepthOfBinaryTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Maximum Depth of Binary Tree\n */\nvar maximumDepthOfBinaryTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto maximumDepthOfBinaryTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc maximumDepthOfBinaryTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn maximum_depth_of_binary_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "diameter-of-binary-tree",
+    "title": "Diameter of Binary Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "description": "Given problem `Diameter of Binary Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def diameterOfBinaryTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Diameter of Binary Tree\n */\nvar diameterOfBinaryTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto diameterOfBinaryTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc diameterOfBinaryTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn diameter_of_binary_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "balanced-binary-tree",
+    "title": "Balanced Binary Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "description": "Given problem `Balanced Binary Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def balancedBinaryTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Balanced Binary Tree\n */\nvar balancedBinaryTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto balancedBinaryTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc balancedBinaryTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn balanced_binary_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "same-tree",
+    "title": "Same Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "description": "Given problem `Same Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def sameTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Same Tree\n */\nvar sameTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto sameTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc sameTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn same_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "subtree-of-another-tree",
+    "title": "Subtree of Another Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "description": "Given problem `Subtree of Another Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def subtreeOfAnotherTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Subtree of Another Tree\n */\nvar subtreeOfAnotherTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto subtreeOfAnotherTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc subtreeOfAnotherTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn subtree_of_another_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "lowest-common-ancestor-of-a-bst",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "difficulty": "MEDIUM",
+    "category": "Trees",
+    "description": "Given problem `Lowest Common Ancestor of a Binary Search Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def lowestCommonAncestorOfABst(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Lowest Common Ancestor of a Binary Search Tree\n */\nvar lowestCommonAncestorOfABst = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto lowestCommonAncestorOfABst() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc lowestCommonAncestorOfABst() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn lowest_common_ancestor_of_a_bst() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "binary-tree-level-order-traversal",
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "MEDIUM",
+    "category": "Trees",
+    "description": "Given problem `Binary Tree Level Order Traversal` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def binaryTreeLevelOrderTraversal(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Binary Tree Level Order Traversal\n */\nvar binaryTreeLevelOrderTraversal = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto binaryTreeLevelOrderTraversal() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc binaryTreeLevelOrderTraversal() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn binary_tree_level_order_traversal() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "binary-tree-right-side-view",
+    "title": "Binary Tree Right Side View",
+    "difficulty": "MEDIUM",
+    "category": "Trees",
+    "description": "Given problem `Binary Tree Right Side View` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def binaryTreeRightSideView(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Binary Tree Right Side View\n */\nvar binaryTreeRightSideView = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto binaryTreeRightSideView() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc binaryTreeRightSideView() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn binary_tree_right_side_view() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "count-good-nodes-in-binary-tree",
+    "title": "Count Good Nodes in Binary Tree",
+    "difficulty": "MEDIUM",
+    "category": "Trees",
+    "description": "Given problem `Count Good Nodes in Binary Tree` under the **Trees** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def countGoodNodesInBinaryTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Count Good Nodes in Binary Tree\n */\nvar countGoodNodesInBinaryTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto countGoodNodesInBinaryTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc countGoodNodesInBinaryTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn count_good_nodes_in_binary_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "implement-trie-prefix-tree",
+    "title": "Implement Trie (Prefix Tree)",
+    "difficulty": "MEDIUM",
+    "category": "Tries",
+    "description": "Given problem `Implement Trie (Prefix Tree)` under the **Tries** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def implementTriePrefixTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Implement Trie (Prefix Tree)\n */\nvar implementTriePrefixTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto implementTriePrefixTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc implementTriePrefixTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn implement_trie_prefix_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "design-add-and-search-words-data-structure",
+    "title": "Design Add and Search Words Data Structure",
+    "difficulty": "MEDIUM",
+    "category": "Tries",
+    "description": "Given problem `Design Add and Search Words Data Structure` under the **Tries** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def designAddAndSearchWordsDataStructure(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Design Add and Search Words Data Structure\n */\nvar designAddAndSearchWordsDataStructure = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto designAddAndSearchWordsDataStructure() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc designAddAndSearchWordsDataStructure() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn design_add_and_search_words_data_structure() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "word-search-ii",
+    "title": "Word Search II",
+    "difficulty": "HARD",
+    "category": "Tries",
+    "description": "Given problem `Word Search II` under the **Tries** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def wordSearchIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Word Search II\n */\nvar wordSearchIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto wordSearchIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc wordSearchIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn word_search_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "kth-largest-element-in-a-stream",
+    "title": "Kth Largest Element in a Stream",
+    "difficulty": "EASY",
+    "category": "Heap / Priority Queue",
+    "description": "Given problem `Kth Largest Element in a Stream` under the **Heap / Priority Queue** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def kthLargestElementInAStream(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Kth Largest Element in a Stream\n */\nvar kthLargestElementInAStream = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto kthLargestElementInAStream() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc kthLargestElementInAStream() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn kth_largest_element_in_a_stream() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "last-stone-weight",
+    "title": "Last Stone Weight",
+    "difficulty": "EASY",
+    "category": "Heap / Priority Queue",
+    "description": "Given problem `Last Stone Weight` under the **Heap / Priority Queue** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def lastStoneWeight(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Last Stone Weight\n */\nvar lastStoneWeight = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto lastStoneWeight() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc lastStoneWeight() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn last_stone_weight() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "k-closest-points-to-origin",
+    "title": "K Closest Points to Origin",
+    "difficulty": "MEDIUM",
+    "category": "Heap / Priority Queue",
+    "description": "Given problem `K Closest Points to Origin` under the **Heap / Priority Queue** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def kClosestPointsToOrigin(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: K Closest Points to Origin\n */\nvar kClosestPointsToOrigin = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto kClosestPointsToOrigin() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc kClosestPointsToOrigin() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn k_closest_points_to_origin() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "difficulty": "MEDIUM",
+    "category": "Heap / Priority Queue",
+    "description": "Given problem `Kth Largest Element in an Array` under the **Heap / Priority Queue** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def kthLargestElementInAnArray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Kth Largest Element in an Array\n */\nvar kthLargestElementInAnArray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto kthLargestElementInAnArray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc kthLargestElementInAnArray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn kth_largest_element_in_an_array() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "task-scheduler",
+    "title": "Task Scheduler",
+    "difficulty": "MEDIUM",
+    "category": "Heap / Priority Queue",
+    "description": "Given problem `Task Scheduler` under the **Heap / Priority Queue** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def taskScheduler(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Task Scheduler\n */\nvar taskScheduler = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto taskScheduler() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc taskScheduler() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn task_scheduler() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "design-twitter",
+    "title": "Design Twitter",
+    "difficulty": "MEDIUM",
+    "category": "Heap / Priority Queue",
+    "description": "Given problem `Design Twitter` under the **Heap / Priority Queue** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def designTwitter(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Design Twitter\n */\nvar designTwitter = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto designTwitter() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc designTwitter() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn design_twitter() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "subsets",
+    "title": "Subsets",
+    "difficulty": "MEDIUM",
+    "category": "Backtracking",
+    "description": "Given problem `Subsets` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def subsets(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Subsets\n */\nvar subsets = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto subsets() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc subsets() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn subsets() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "combination-sum",
+    "title": "Combination Sum",
+    "difficulty": "MEDIUM",
+    "category": "Backtracking",
+    "description": "Given problem `Combination Sum` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def combinationSum(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Combination Sum\n */\nvar combinationSum = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto combinationSum() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc combinationSum() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn combination_sum() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "permutations",
+    "title": "Permutations",
+    "difficulty": "MEDIUM",
+    "category": "Backtracking",
+    "description": "Given problem `Permutations` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def permutations(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Permutations\n */\nvar permutations = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto permutations() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc permutations() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn permutations() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "subsets-ii",
+    "title": "Subsets II",
+    "difficulty": "MEDIUM",
+    "category": "Backtracking",
+    "description": "Given problem `Subsets II` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def subsetsIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Subsets II\n */\nvar subsetsIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto subsetsIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc subsetsIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn subsets_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "combination-sum-ii",
+    "title": "Combination Sum II",
+    "difficulty": "MEDIUM",
+    "category": "Backtracking",
+    "description": "Given problem `Combination Sum II` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def combinationSumIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Combination Sum II\n */\nvar combinationSumIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto combinationSumIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc combinationSumIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn combination_sum_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "word-search",
+    "title": "Word Search",
+    "difficulty": "MEDIUM",
+    "category": "Backtracking",
+    "description": "Given problem `Word Search` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def wordSearch(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Word Search\n */\nvar wordSearch = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto wordSearch() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc wordSearch() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn word_search() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "n-queens",
+    "title": "N-Queens",
+    "difficulty": "HARD",
+    "category": "Backtracking",
+    "description": "Given problem `N-Queens` under the **Backtracking** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def nQueens(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: N-Queens\n */\nvar nQueens = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto nQueens() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc nQueens() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn n_queens() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "max-area-of-island",
+    "title": "Max Area of Island",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Max Area of Island` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def maxAreaOfIsland(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Max Area of Island\n */\nvar maxAreaOfIsland = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto maxAreaOfIsland() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc maxAreaOfIsland() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn max_area_of_island() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "clone-graph",
+    "title": "Clone Graph",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Clone Graph` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def cloneGraph(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Clone Graph\n */\nvar cloneGraph = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto cloneGraph() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc cloneGraph() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn clone_graph() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "walls-and-gates",
+    "title": "Walls and Gates",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Walls and Gates` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def wallsAndGates(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Walls and Gates\n */\nvar wallsAndGates = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto wallsAndGates() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc wallsAndGates() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn walls_and_gates() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "course-schedule",
+    "title": "Course Schedule",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Course Schedule` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def courseSchedule(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Course Schedule\n */\nvar courseSchedule = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto courseSchedule() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc courseSchedule() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn course_schedule() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "course-schedule-ii",
+    "title": "Course Schedule II",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Course Schedule II` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def courseScheduleIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Course Schedule II\n */\nvar courseScheduleIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto courseScheduleIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc courseScheduleIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn course_schedule_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "redundant-connection",
+    "title": "Redundant Connection",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Redundant Connection` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def redundantConnection(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Redundant Connection\n */\nvar redundantConnection = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto redundantConnection() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc redundantConnection() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn redundant_connection() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "number-of-connected-components-in-an-undirected-graph",
+    "title": "Number of Connected Components",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Number of Connected Components` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def numberOfConnectedComponentsInAnUndirectedGraph(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Number of Connected Components\n */\nvar numberOfConnectedComponentsInAnUndirectedGraph = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto numberOfConnectedComponentsInAnUndirectedGraph() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc numberOfConnectedComponentsInAnUndirectedGraph() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn number_of_connected_components_in_an_undirected_graph() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "graph-valid-tree",
+    "title": "Graph Valid Tree",
+    "difficulty": "MEDIUM",
+    "category": "Graphs",
+    "description": "Given problem `Graph Valid Tree` under the **Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def graphValidTree(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Graph Valid Tree\n */\nvar graphValidTree = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto graphValidTree() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc graphValidTree() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn graph_valid_tree() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "reconstruct-itinerary",
+    "title": "Reconstruct Itinerary",
+    "difficulty": "HARD",
+    "category": "Advanced Graphs",
+    "description": "Given problem `Reconstruct Itinerary` under the **Advanced Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def reconstructItinerary(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Reconstruct Itinerary\n */\nvar reconstructItinerary = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto reconstructItinerary() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc reconstructItinerary() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn reconstruct_itinerary() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "min-cost-to-connect-all-points",
+    "title": "Min Cost to Connect All Points",
+    "difficulty": "MEDIUM",
+    "category": "Advanced Graphs",
+    "description": "Given problem `Min Cost to Connect All Points` under the **Advanced Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def minCostToConnectAllPoints(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Min Cost to Connect All Points\n */\nvar minCostToConnectAllPoints = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto minCostToConnectAllPoints() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc minCostToConnectAllPoints() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn min_cost_to_connect_all_points() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "network-delay-time",
+    "title": "Network Delay Time",
+    "difficulty": "MEDIUM",
+    "category": "Advanced Graphs",
+    "description": "Given problem `Network Delay Time` under the **Advanced Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def networkDelayTime(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Network Delay Time\n */\nvar networkDelayTime = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto networkDelayTime() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc networkDelayTime() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn network_delay_time() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "swim-in-rising-water",
+    "title": "Swim in Rising Water",
+    "difficulty": "HARD",
+    "category": "Advanced Graphs",
+    "description": "Given problem `Swim in Rising Water` under the **Advanced Graphs** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def swimInRisingWater(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Swim in Rising Water\n */\nvar swimInRisingWater = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto swimInRisingWater() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc swimInRisingWater() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn swim_in_rising_water() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "min-cost-climbing-stairs",
+    "title": "Min Cost Climbing Stairs",
+    "difficulty": "EASY",
+    "category": "1D Dynamic Programming",
+    "description": "Given problem `Min Cost Climbing Stairs` under the **1D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def minCostClimbingStairs(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Min Cost Climbing Stairs\n */\nvar minCostClimbingStairs = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto minCostClimbingStairs() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc minCostClimbingStairs() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn min_cost_climbing_stairs() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "house-robber-ii",
+    "title": "House Robber II",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "Given problem `House Robber II` under the **1D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def houseRobberIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: House Robber II\n */\nvar houseRobberIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto houseRobberIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc houseRobberIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn house_robber_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "longest-palindromic-substring",
+    "title": "Longest Palindromic Substring",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "Given problem `Longest Palindromic Substring` under the **1D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def longestPalindromicSubstring(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Longest Palindromic Substring\n */\nvar longestPalindromicSubstring = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto longestPalindromicSubstring() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc longestPalindromicSubstring() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn longest_palindromic_substring() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "palindromic-substrings",
+    "title": "Palindromic Substrings",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "Given problem `Palindromic Substrings` under the **1D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def palindromicSubstrings(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Palindromic Substrings\n */\nvar palindromicSubstrings = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto palindromicSubstrings() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc palindromicSubstrings() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn palindromic_substrings() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "decode-ways",
+    "title": "Decode Ways",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "Given problem `Decode Ways` under the **1D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def decodeWays(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Decode Ways\n */\nvar decodeWays = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto decodeWays() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc decodeWays() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn decode_ways() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "difficulty": "MEDIUM",
+    "category": "1D Dynamic Programming",
+    "description": "Given problem `Maximum Product Subarray` under the **1D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def maximumProductSubarray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Maximum Product Subarray\n */\nvar maximumProductSubarray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto maximumProductSubarray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc maximumProductSubarray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn maximum_product_subarray() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "unique-paths",
+    "title": "Unique Paths",
+    "difficulty": "MEDIUM",
+    "category": "2D Dynamic Programming",
+    "description": "Given problem `Unique Paths` under the **2D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def uniquePaths(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Unique Paths\n */\nvar uniquePaths = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto uniquePaths() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc uniquePaths() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn unique_paths() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "longest-common-subsequence",
+    "title": "Longest Common Subsequence",
+    "difficulty": "MEDIUM",
+    "category": "2D Dynamic Programming",
+    "description": "Given problem `Longest Common Subsequence` under the **2D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def longestCommonSubsequence(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Longest Common Subsequence\n */\nvar longestCommonSubsequence = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto longestCommonSubsequence() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc longestCommonSubsequence() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn longest_common_subsequence() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+    "title": "Best Time to Buy & Sell Stock with Cooldown",
+    "difficulty": "MEDIUM",
+    "category": "2D Dynamic Programming",
+    "description": "Given problem `Best Time to Buy & Sell Stock with Cooldown` under the **2D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def bestTimeToBuyAndSellStockWithCooldown(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Best Time to Buy & Sell Stock with Cooldown\n */\nvar bestTimeToBuyAndSellStockWithCooldown = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto bestTimeToBuyAndSellStockWithCooldown() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc bestTimeToBuyAndSellStockWithCooldown() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn best_time_to_buy_and_sell_stock_with_cooldown() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "coin-change-ii",
+    "title": "Coin Change II",
+    "difficulty": "MEDIUM",
+    "category": "2D Dynamic Programming",
+    "description": "Given problem `Coin Change II` under the **2D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def coinChangeIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Coin Change II\n */\nvar coinChangeIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto coinChangeIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc coinChangeIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn coin_change_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "target-sum",
+    "title": "Target Sum",
+    "difficulty": "MEDIUM",
+    "category": "2D Dynamic Programming",
+    "description": "Given problem `Target Sum` under the **2D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def targetSum(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Target Sum\n */\nvar targetSum = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto targetSum() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc targetSum() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn target_sum() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "edit-distance",
+    "title": "Edit Distance",
+    "difficulty": "HARD",
+    "category": "2D Dynamic Programming",
+    "description": "Given problem `Edit Distance` under the **2D Dynamic Programming** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def editDistance(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Edit Distance\n */\nvar editDistance = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto editDistance() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc editDistance() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn edit_distance() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "maximum-subarray",
+    "title": "Maximum Subarray",
+    "difficulty": "MEDIUM",
+    "category": "Greedy",
+    "description": "Given problem `Maximum Subarray` under the **Greedy** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def maximumSubarray(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Maximum Subarray\n */\nvar maximumSubarray = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto maximumSubarray() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc maximumSubarray() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn maximum_subarray() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "jump-game",
+    "title": "Jump Game",
+    "difficulty": "MEDIUM",
+    "category": "Greedy",
+    "description": "Given problem `Jump Game` under the **Greedy** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def jumpGame(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Jump Game\n */\nvar jumpGame = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto jumpGame() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc jumpGame() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn jump_game() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "jump-game-ii",
+    "title": "Jump Game II",
+    "difficulty": "MEDIUM",
+    "category": "Greedy",
+    "description": "Given problem `Jump Game II` under the **Greedy** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def jumpGameIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Jump Game II\n */\nvar jumpGameIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto jumpGameIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc jumpGameIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn jump_game_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "gas-station",
+    "title": "Gas Station",
+    "difficulty": "MEDIUM",
+    "category": "Greedy",
+    "description": "Given problem `Gas Station` under the **Greedy** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def gasStation(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Gas Station\n */\nvar gasStation = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto gasStation() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc gasStation() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn gas_station() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "hand-of-straights",
+    "title": "Hand of Straights",
+    "difficulty": "MEDIUM",
+    "category": "Greedy",
+    "description": "Given problem `Hand of Straights` under the **Greedy** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def handOfStraights(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Hand of Straights\n */\nvar handOfStraights = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto handOfStraights() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc handOfStraights() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn hand_of_straights() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "insert-interval",
+    "title": "Insert Interval",
+    "difficulty": "MEDIUM",
+    "category": "Intervals",
+    "description": "Given problem `Insert Interval` under the **Intervals** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def insertInterval(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Insert Interval\n */\nvar insertInterval = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto insertInterval() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc insertInterval() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn insert_interval() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "merge-intervals",
+    "title": "Merge Intervals",
+    "difficulty": "MEDIUM",
+    "category": "Intervals",
+    "description": "Given problem `Merge Intervals` under the **Intervals** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def mergeIntervals(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Merge Intervals\n */\nvar mergeIntervals = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto mergeIntervals() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc mergeIntervals() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn merge_intervals() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "non-overlapping-intervals",
+    "title": "Non-overlapping Intervals",
+    "difficulty": "MEDIUM",
+    "category": "Intervals",
+    "description": "Given problem `Non-overlapping Intervals` under the **Intervals** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def nonOverlappingIntervals(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Non-overlapping Intervals\n */\nvar nonOverlappingIntervals = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto nonOverlappingIntervals() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc nonOverlappingIntervals() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn non_overlapping_intervals() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "meeting-rooms",
+    "title": "Meeting Rooms",
+    "difficulty": "EASY",
+    "category": "Intervals",
+    "description": "Given problem `Meeting Rooms` under the **Intervals** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def meetingRooms(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Meeting Rooms\n */\nvar meetingRooms = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto meetingRooms() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc meetingRooms() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn meeting_rooms() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "meeting-rooms-ii",
+    "title": "Meeting Rooms II",
+    "difficulty": "MEDIUM",
+    "category": "Intervals",
+    "description": "Given problem `Meeting Rooms II` under the **Intervals** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def meetingRoomsIi(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Meeting Rooms II\n */\nvar meetingRoomsIi = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto meetingRoomsIi() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc meetingRoomsIi() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn meeting_rooms_ii() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "rotate-image",
+    "title": "Rotate Image",
+    "difficulty": "MEDIUM",
+    "category": "Math & Geometry",
+    "description": "Given problem `Rotate Image` under the **Math & Geometry** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def rotateImage(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Rotate Image\n */\nvar rotateImage = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto rotateImage() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc rotateImage() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn rotate_image() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "difficulty": "MEDIUM",
+    "category": "Math & Geometry",
+    "description": "Given problem `Spiral Matrix` under the **Math & Geometry** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def spiralMatrix(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Spiral Matrix\n */\nvar spiralMatrix = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto spiralMatrix() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc spiralMatrix() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn spiral_matrix() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "set-matrix-zeroes",
+    "title": "Set Matrix Zeroes",
+    "difficulty": "MEDIUM",
+    "category": "Math & Geometry",
+    "description": "Given problem `Set Matrix Zeroes` under the **Math & Geometry** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def setMatrixZeroes(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Set Matrix Zeroes\n */\nvar setMatrixZeroes = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto setMatrixZeroes() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc setMatrixZeroes() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn set_matrix_zeroes() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "happy-number",
+    "title": "Happy Number",
+    "difficulty": "EASY",
+    "category": "Math & Geometry",
+    "description": "Given problem `Happy Number` under the **Math & Geometry** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def happyNumber(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Happy Number\n */\nvar happyNumber = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto happyNumber() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc happyNumber() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn happy_number() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "powx-n",
+    "title": "Pow(x, n)",
+    "difficulty": "MEDIUM",
+    "category": "Math & Geometry",
+    "description": "Given problem `Pow(x, n)` under the **Math & Geometry** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def powxN(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Pow(x, n)\n */\nvar powxN = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto powxN() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc powxN() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn powx_n() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "single-number",
+    "title": "Single Number",
+    "difficulty": "EASY",
+    "category": "Bit Manipulation",
+    "description": "Given problem `Single Number` under the **Bit Manipulation** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def singleNumber(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Single Number\n */\nvar singleNumber = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto singleNumber() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc singleNumber() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn single_number() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "number-of-1-bits",
+    "title": "Number of 1 Bits",
+    "difficulty": "EASY",
+    "category": "Bit Manipulation",
+    "description": "Given problem `Number of 1 Bits` under the **Bit Manipulation** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def numberOf1Bits(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Number of 1 Bits\n */\nvar numberOf1Bits = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto numberOf1Bits() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc numberOf1Bits() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn number_of_1_bits() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "counting-bits",
+    "title": "Counting Bits",
+    "difficulty": "EASY",
+    "category": "Bit Manipulation",
+    "description": "Given problem `Counting Bits` under the **Bit Manipulation** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def countingBits(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Counting Bits\n */\nvar countingBits = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto countingBits() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc countingBits() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn counting_bits() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "reverse-bits",
+    "title": "Reverse Bits",
+    "difficulty": "EASY",
+    "category": "Bit Manipulation",
+    "description": "Given problem `Reverse Bits` under the **Bit Manipulation** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def reverseBits(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Reverse Bits\n */\nvar reverseBits = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto reverseBits() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc reverseBits() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn reverse_bits() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "missing-number",
+    "title": "Missing Number",
+    "difficulty": "EASY",
+    "category": "Bit Manipulation",
+    "description": "Given problem `Missing Number` under the **Bit Manipulation** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def missingNumber(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Missing Number\n */\nvar missingNumber = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto missingNumber() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc missingNumber() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn missing_number() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  },
+  {
+    "slug": "sum-of-two-integers",
+    "title": "Sum of Two Integers",
+    "difficulty": "MEDIUM",
+    "category": "Bit Manipulation",
+    "description": "Given problem `Sum of Two Integers` under the **Bit Manipulation** topic.\n\nImplement an optimal solution to pass all given test cases.",
+    "starter_code": {
+      "python": "class Solution:\n    def sumOfTwoIntegers(self, *args, **kwargs):\n        # Write your solution here\n        pass\n",
+      "javascript": "/**\n * Problem: Sum of Two Integers\n */\nvar sumOfTwoIntegers = function(...args) {\n    // Write your solution here\n};\n",
+      "cpp": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Solution {\npublic:\n    auto sumOfTwoIntegers() {\n        // Write your solution here\n    }\n};\n",
+      "c": "#include <stdio.h>\n#include <stdlib.h>\n#include <stdbool.h>\n#include <string.h>\n\n// Write your solution here\n",
+      "java": "import java.util.*;\n\nclass Solution {\n    // Write your solution here\n}\n",
+      "go": "package main\n\nfunc sumOfTwoIntegers() {\n    // Write your solution here\n}\n",
+      "rust": "impl Solution {\n    pub fn sum_of_two_integers() {\n        // Write your solution here\n    }\n}\n"
+    },
+    "test_cases": [
+      {
+        "input": {
+          "demo": true
+        },
+        "expected_output": true,
+        "is_hidden": false
+      }
+    ]
+  }
+]
