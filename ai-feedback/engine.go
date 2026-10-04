@@ -16,12 +16,14 @@ import (
 )
 
 type DetailedAnalysis struct {
-	QualityScore    int      `json:"quality_score"` // 0 - 100
-	TimeComplexity  string   `json:"time_complexity"`
-	SpaceComplexity string   `json:"space_complexity"`
-	CodeSmells      []string `json:"code_smells"`
-	Suggestions     []string `json:"suggestions"`
-	Summary         string   `json:"summary"`
+	QualityScore     int      `json:"quality_score"` // 0 - 100
+	TimeComplexity   string   `json:"time_complexity"`
+	SpaceComplexity  string   `json:"space_complexity"`
+	CodeQualityNotes string   `json:"code_quality_notes"`
+	ComplexityNotes  string   `json:"complexity_notes"`
+	CodeSmells       []string `json:"code_smells"`
+	Suggestions      []string `json:"suggestions"`
+	Summary          string   `json:"summary"`
 }
 
 type AIEngine struct {
@@ -66,6 +68,8 @@ Return STRICT JSON with keys:
 "quality_score": int 0 to 100
 "time_complexity": string (e.g. O(N log N))
 "space_complexity": string (e.g. O(1))
+"code_quality_notes": short paragraph on style, naming, readability.
+"complexity_notes": time and space complexity observations.
 "code_smells": array of strings
 "suggestions": array of strings
 "summary": string overview`, title, language, language, code)
@@ -87,10 +91,14 @@ Return STRICT JSON with keys:
 
 	client := &http.Client{Timeout: 10 * time.Second}
 	resp, err := client.Do(httpReq)
-	if err != nil || resp.StatusCode != http.StatusOK {
+	if err != nil {
 		return a.mockAnalysis(language, code)
 	}
 	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return a.mockAnalysis(language, code)
+	}
 
 	bodyBytes, _ := io.ReadAll(resp.Body)
 	var anthropicResp struct {
@@ -103,8 +111,16 @@ Return STRICT JSON with keys:
 		return a.mockAnalysis(language, code)
 	}
 
+	rawText := strings.TrimSpace(anthropicResp.Content[0].Text)
+	if strings.HasPrefix(rawText, "```") {
+		rawText = strings.TrimPrefix(rawText, "```json")
+		rawText = strings.TrimPrefix(rawText, "```")
+		rawText = strings.TrimSuffix(rawText, "```")
+		rawText = strings.TrimSpace(rawText)
+	}
+
 	var result DetailedAnalysis
-	if err := json.Unmarshal([]byte(anthropicResp.Content[0].Text), &result); err != nil {
+	if err := json.Unmarshal([]byte(rawText), &result); err != nil {
 		return a.mockAnalysis(language, code)
 	}
 
@@ -117,10 +133,15 @@ func (a *AIEngine) mockAnalysis(language, code string) *DetailedAnalysis {
 		score = 78
 	}
 
+	qualityNotes := fmt.Sprintf("Solid %s implementation. Variable naming is readable and procedural structure is logical.", language)
+	complexityNotes := "Time Complexity: O(N) - Linear single pass. Space Complexity: O(1) auxiliary space."
+
 	return &DetailedAnalysis{
-		QualityScore:    score,
-		TimeComplexity:  "O(N) - Linear Time Complexity",
-		SpaceComplexity: "O(1) - Constant Space Complexity",
+		QualityScore:     score,
+		TimeComplexity:   "O(N) - Linear Time Complexity",
+		SpaceComplexity:  "O(1) - Constant Space Complexity",
+		CodeQualityNotes: qualityNotes,
+		ComplexityNotes:  complexityNotes,
 		CodeSmells: []string{
 			"Variable names could be more descriptive.",
 			"Consider breaking nested loops into dedicated helper functions.",

@@ -68,6 +68,11 @@ func (h *SubmissionHandler) CreateSubmission(c *gin.Context) {
 		return
 	}
 
+	if h.Queue == nil {
+		c.JSON(http.StatusServiceUnavailable, gin.H{"error": "Submission queue is currently unavailable"})
+		return
+	}
+
 	// 1. Create DB submission record
 	sub, err := h.DB.CreateSubmission(ctx, userID, problemID, req.Language, req.Code)
 	if err != nil {
@@ -83,11 +88,6 @@ func (h *SubmissionHandler) CreateSubmission(c *gin.Context) {
 		Language:     req.Language,
 		Code:         req.Code,
 		TestCases:    p.TestCases,
-	}
-
-	if h.Queue == nil {
-		c.JSON(http.StatusServiceUnavailable, gin.H{"error": "Submission queue is currently unavailable"})
-		return
 	}
 
 	if err := h.Queue.PublishSubmission(ctx, payload); err != nil {

@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -66,10 +67,14 @@ Provide feedback strictly as a JSON object with keys:
 
 	client := &http.Client{Timeout: 10 * time.Second}
 	resp, err := client.Do(httpReq)
-	if err != nil || resp.StatusCode != http.StatusOK {
+	if err != nil {
 		return a.mockFeedback(language, status)
 	}
 	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return a.mockFeedback(language, status)
+	}
 
 	bodyBytes, _ := io.ReadAll(resp.Body)
 	var anthropicResp struct {
@@ -82,8 +87,16 @@ Provide feedback strictly as a JSON object with keys:
 		return a.mockFeedback(language, status)
 	}
 
+	rawText := strings.TrimSpace(anthropicResp.Content[0].Text)
+	if strings.HasPrefix(rawText, "```") {
+		rawText = strings.TrimPrefix(rawText, "```json")
+		rawText = strings.TrimPrefix(rawText, "```")
+		rawText = strings.TrimSuffix(rawText, "```")
+		rawText = strings.TrimSpace(rawText)
+	}
+
 	var result AIFeedbackResult
-	if err := json.Unmarshal([]byte(anthropicResp.Content[0].Text), &result); err != nil {
+	if err := json.Unmarshal([]byte(rawText), &result); err != nil {
 		return a.mockFeedback(language, status)
 	}
 

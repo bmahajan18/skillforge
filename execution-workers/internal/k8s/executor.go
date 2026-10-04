@@ -70,7 +70,11 @@ func (e *Executor) RunSubmissionJob(ctx context.Context, subID, language string,
 }
 
 func (e *Executor) runK8sJob(ctx context.Context, subID, language string, payloadBytes []byte) (*ExecutionResult, error) {
-	jobName := fmt.Sprintf("sub-%s", subID[:8])
+	shortID := subID
+	if len(shortID) > 8 {
+		shortID = shortID[:8]
+	}
+	jobName := fmt.Sprintf("sub-%s", shortID)
 	imageName := "skillforge-runner-" + language + ":latest"
 
 	activeDeadlineSec := int64(6)
@@ -98,6 +102,12 @@ func (e *Executor) runK8sJob(ctx context.Context, subID, language string, payloa
 							Name:            "runner",
 							Image:           imageName,
 							ImagePullPolicy: corev1.PullIfNotPresent,
+							Env: []corev1.EnvVar{
+								{
+									Name:  "PAYLOAD_JSON",
+									Value: string(payloadBytes),
+								},
+							},
 							Resources: corev1.ResourceRequirements{
 								Limits: corev1.ResourceList{
 									corev1.ResourceCPU:    resource.MustParse("500m"),

@@ -114,15 +114,12 @@ func (d *DB) AuthenticateUser(ctx context.Context, email, password string) (*mod
 		WHERE email = $1 OR username = $1
 	`, email).Scan(&user.ID, &user.Email, &user.Username, &user.AvatarURL, &storedHash, &user.CreatedAt)
 
-	if err != nil {
+	if err != nil || storedHash == "" {
 		return nil, fmt.Errorf("invalid email or password")
 	}
 
-	if storedHash != "" {
-		err = bcrypt.CompareHashAndPassword([]byte(storedHash), []byte(password))
-		if err != nil {
-			return nil, fmt.Errorf("invalid email or password")
-		}
+	if err := bcrypt.CompareHashAndPassword([]byte(storedHash), []byte(password)); err != nil {
+		return nil, fmt.Errorf("invalid email or password")
 	}
 
 	return &user, nil
